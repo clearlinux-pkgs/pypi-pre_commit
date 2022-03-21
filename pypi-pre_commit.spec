@@ -4,7 +4,7 @@
 #
 Name     : pypi-pre_commit
 Version  : 2.17.0
-Release  : 14
+Release  : 15
 URL      : https://files.pythonhosted.org/packages/32/ea/13bb25c70e6d04b5788c42e0d3fcc82b06bc89f5d44c3c5606ef1af5a7cc/pre_commit-2.17.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/32/ea/13bb25c70e6d04b5788c42e0d3fcc82b06bc89f5d44c3c5606ef1af5a7cc/pre_commit-2.17.0.tar.gz
 Summary  : A framework for managing and maintaining multi-language pre-commit hooks.
@@ -15,7 +15,6 @@ Requires: pypi-pre_commit-license = %{version}-%{release}
 Requires: pypi-pre_commit-python = %{version}-%{release}
 Requires: pypi-pre_commit-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : buildreq-golang
 BuildRequires : pypi(cfgv)
 BuildRequires : pypi(identify)
 BuildRequires : pypi(nodeenv)
@@ -79,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1642607531
+export SOURCE_DATE_EPOCH=1647882844
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
