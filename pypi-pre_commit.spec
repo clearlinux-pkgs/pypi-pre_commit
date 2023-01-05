@@ -4,7 +4,7 @@
 #
 Name     : pypi-pre_commit
 Version  : 2.21.0
-Release  : 26
+Release  : 27
 URL      : https://files.pythonhosted.org/packages/6b/00/1637ae945c6e10838ef5c41965f1c864e59301811bb203e979f335608e7c/pre_commit-2.21.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6b/00/1637ae945c6e10838ef5c41965f1c864e59301811bb203e979f335608e7c/pre_commit-2.21.0.tar.gz
 Summary  : A framework for managing and maintaining multi-language pre-commit hooks.
