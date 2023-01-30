@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pre_commit
-URL = https://files.pythonhosted.org/packages/5f/8f/35c30b0f1647014867f8b9bd36ae33faa88fd2ec8e59e62686b0e38b6122/pre_commit-3.0.1.tar.gz
+URL = https://files.pythonhosted.org/packages/d4/27/dcc5671be62457ec522ad1157422e78c416011ea12a0be022f1380807093/pre_commit-3.0.2.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
