@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-pre_commit
-Version  : 3.2.0
-Release  : 35
-URL      : https://files.pythonhosted.org/packages/59/5d/157a051b2a402d7d27eb7c478fd7c1a231b94779054b3d7aef1719378e2d/pre_commit-3.2.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/59/5d/157a051b2a402d7d27eb7c478fd7c1a231b94779054b3d7aef1719378e2d/pre_commit-3.2.0.tar.gz
+Version  : 3.2.1
+Release  : 36
+URL      : https://files.pythonhosted.org/packages/c9/31/5055de265076eb86e5088b5439aefb948b1aba23f2984aa9a075aae5d9e1/pre_commit-3.2.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c9/31/5055de265076eb86e5088b5439aefb948b1aba23f2984aa9a075aae5d9e1/pre_commit-3.2.1.tar.gz
 Summary  : A framework for managing and maintaining multi-language pre-commit hooks.
 Group    : Development/Tools
 License  : MIT
@@ -71,10 +71,10 @@ python3 components for the pypi-pre_commit package.
 
 
 %prep
-%setup -q -n pre_commit-3.2.0
-cd %{_builddir}/pre_commit-3.2.0
+%setup -q -n pre_commit-3.2.1
+cd %{_builddir}/pre_commit-3.2.1
 pushd ..
-cp -a pre_commit-3.2.0 buildavx2
+cp -a pre_commit-3.2.1 buildavx2
 popd
 
 %build
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679327179
+export SOURCE_DATE_EPOCH=1679938875
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
