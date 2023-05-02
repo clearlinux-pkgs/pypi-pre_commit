@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-pre_commit
-Version  : 3.2.2
-Release  : 37
-URL      : https://files.pythonhosted.org/packages/89/40/0f5b8d53178545f736172c8c2fc4f5eb68fffa828dba5ddad3cc43af878e/pre_commit-3.2.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/89/40/0f5b8d53178545f736172c8c2fc4f5eb68fffa828dba5ddad3cc43af878e/pre_commit-3.2.2.tar.gz
+Version  : 3.3.0
+Release  : 38
+URL      : https://files.pythonhosted.org/packages/20/39/b661d2bf936fb24f5bac50f1717d59ef4fe04813f84cac109e9edc0a04c2/pre_commit-3.3.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/20/39/b661d2bf936fb24f5bac50f1717d59ef4fe04813f84cac109e9edc0a04c2/pre_commit-3.3.0.tar.gz
 Summary  : A framework for managing and maintaining multi-language pre-commit hooks.
 Group    : Development/Tools
 License  : MIT
@@ -71,10 +71,10 @@ python3 components for the pypi-pre_commit package.
 
 
 %prep
-%setup -q -n pre_commit-3.2.2
-cd %{_builddir}/pre_commit-3.2.2
+%setup -q -n pre_commit-3.3.0
+cd %{_builddir}/pre_commit-3.3.0
 pushd ..
-cp -a pre_commit-3.2.2 buildavx2
+cp -a pre_commit-3.3.0 buildavx2
 popd
 
 %build
@@ -82,15 +82,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680619876
+export SOURCE_DATE_EPOCH=1683041889
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
