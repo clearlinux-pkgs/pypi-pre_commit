@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-pre_commit
-Version  : 3.3.0
-Release  : 38
-URL      : https://files.pythonhosted.org/packages/20/39/b661d2bf936fb24f5bac50f1717d59ef4fe04813f84cac109e9edc0a04c2/pre_commit-3.3.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/20/39/b661d2bf936fb24f5bac50f1717d59ef4fe04813f84cac109e9edc0a04c2/pre_commit-3.3.0.tar.gz
+Version  : 3.3.2
+Release  : 39
+URL      : https://files.pythonhosted.org/packages/21/55/fccc69a49b66c54dcb9a7d8620131a2566db973837c6611b516a2d4e87d7/pre_commit-3.3.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/21/55/fccc69a49b66c54dcb9a7d8620131a2566db973837c6611b516a2d4e87d7/pre_commit-3.3.2.tar.gz
 Summary  : A framework for managing and maintaining multi-language pre-commit hooks.
 Group    : Development/Tools
 License  : MIT
@@ -16,11 +16,6 @@ Requires: pypi-pre_commit-license = %{version}-%{release}
 Requires: pypi-pre_commit-python = %{version}-%{release}
 Requires: pypi-pre_commit-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(cfgv)
-BuildRequires : pypi(identify)
-BuildRequires : pypi(nodeenv)
-BuildRequires : pypi(pyyaml)
-BuildRequires : pypi(virtualenv)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -71,10 +66,10 @@ python3 components for the pypi-pre_commit package.
 
 
 %prep
-%setup -q -n pre_commit-3.3.0
-cd %{_builddir}/pre_commit-3.3.0
+%setup -q -n pre_commit-3.3.2
+cd %{_builddir}/pre_commit-3.3.2
 pushd ..
-cp -a pre_commit-3.3.0 buildavx2
+cp -a pre_commit-3.3.2 buildavx2
 popd
 
 %build
@@ -82,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683041889
+export SOURCE_DATE_EPOCH=1684611209
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
